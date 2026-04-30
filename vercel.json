@@ -1,3 +1,7 @@
 {
-    "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/index.html" }]
+    "cleanUrls": true,
+    "rewrites": [
+        { "source": "/bot-tool/(.*)", "destination": "/bot-tool/$1" },
+        { "source": "/(.*)", "destination": "/index.html" }
+    ]
 }

@@ -87,6 +87,9 @@ export default defineConfig({
             { from: path.resolve(__dirname, '../../node_modules/@deriv/deriv-charts/dist/chart/assets/shaders/*'), to: 'assets/shaders/[name][ext]' },
             { from: path.join(__dirname, 'public') },
         ],
+        distPath: {
+            root: '../../dist/bot-tool',
+        },
         // Ensure service worker is not cached by the browser
         filename: {
             js: ({ chunk }) => {
