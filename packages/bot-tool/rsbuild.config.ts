@@ -69,8 +69,10 @@ export default defineConfig({
             Assets: path.resolve(__dirname, './src/pages/dtrader/app/Assets'),
             Documents: path.resolve(__dirname, './src/pages/dtrader/app/Documents'),
             '@deriv/stores': path.resolve(__dirname, './src/stores'),
-            '@deriv/shared': path.resolve(__dirname, './src/components/shared/index.ts'),
-            '@deriv/components': path.resolve(__dirname, './src/components/shared/index.ts'),
+            '@deriv/shared': path.resolve(__dirname, '../../packages/shared/src/index.ts'),
+            '@deriv/components': path.resolve(__dirname, '../../packages/components/src/index.ts'),
+            '@deriv/hooks': path.resolve(__dirname, '../../packages/hooks/src/index.ts'),
+            '@deriv/translations': path.resolve(__dirname, '../../packages/translations/src/index.ts'),
         },
     },
     output: {
