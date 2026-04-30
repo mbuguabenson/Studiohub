@@ -81,7 +81,7 @@ module.exports = function (env) {
             filename: 'js/core.[name].[fullhash].js',
             chunkFilename: 'js/core.chunk.[name].[fullhash].js',
             publicPath: base,
-            path: path.resolve(__dirname, '../dist'),
+            path: path.resolve(__dirname, '../../../dist'),
         },
         plugins: plugins({
             base,
