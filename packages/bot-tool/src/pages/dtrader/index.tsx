@@ -1,15 +1,15 @@
-import React from 'react';
+import { useStore } from '@/hooks/useStore';
+import App from './app/index';
+import { bridgeStore, bridgeWS } from './store-bridge';
 import './dtrader.scss';
 
 const DTrader = () => {
+    const profithub_store = useStore();
+    const bridged_store = bridgeStore(profithub_store);
+
     return (
         <div className='dtrader-container'>
-            <iframe
-                src="/dtrader"
-                title="DTrader"
-                className='dtrader-iframe'
-                allow="camera;microphone;clipboard-read;clipboard-write;display-capture;fullscreen"
-            />
+            <App passthrough={{ root_store: bridged_store, WS: bridgeWS({}) }} />
         </div>
     );
 };
