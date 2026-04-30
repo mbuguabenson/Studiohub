@@ -47,6 +47,12 @@ export default defineConfig({
                 VITE_APP_ID: JSON.stringify(process.env.VITE_APP_ID || ''),
             },
         },
+        include: [
+            path.resolve(__dirname, '../../packages/shared'),
+            path.resolve(__dirname, '../../packages/components'),
+            path.resolve(__dirname, '../../packages/hooks'),
+            path.resolve(__dirname, '../../packages/translations'),
+        ],
     },
     resolve: {
         alias: {
@@ -69,10 +75,10 @@ export default defineConfig({
             Assets: path.resolve(__dirname, './src/pages/dtrader/app/Assets'),
             Documents: path.resolve(__dirname, './src/pages/dtrader/app/Documents'),
             '@deriv/stores': path.resolve(__dirname, './src/stores'),
-            '@deriv/shared': path.resolve(__dirname, '../../packages/shared/src/index.ts'),
-            '@deriv/components': path.resolve(__dirname, '../../packages/components/src/index.ts'),
-            '@deriv/hooks': path.resolve(__dirname, '../../packages/hooks/src/index.ts'),
-            '@deriv/translations': path.resolve(__dirname, '../../packages/translations/src/index.ts'),
+            '@deriv/shared': path.resolve(__dirname, '../../packages/shared/src'),
+            '@deriv/components': path.resolve(__dirname, '../../packages/components/src'),
+            '@deriv/hooks': path.resolve(__dirname, '../../packages/hooks/src'),
+            '@deriv/translations': path.resolve(__dirname, '../../packages/translations/src'),
         },
     },
     output: {
