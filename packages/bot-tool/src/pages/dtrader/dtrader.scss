@@ -1,0 +1,21 @@
+.dtrader-container {
+    width: 100%;
+    height: calc(100vh - 48px); // Subtract header height
+    position: relative;
+    overflow: hidden;
+    background: var(--fill-normal);
+
+    .dtrader-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+    }
+}
+
+// For mobile, we might want to adjust the height
+@media (max-width: 991px) {
+    .dtrader-container {
+        height: calc(100vh - 96px); // Header + Tabs
+    }
+}
