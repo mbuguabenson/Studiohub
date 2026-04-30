@@ -1,3 +1,4 @@
+import React from 'react';
 import { useStore } from '@/hooks/useStore';
 import App from './app/index';
 import { bridgeStore, bridgeWS } from './store-bridge';
